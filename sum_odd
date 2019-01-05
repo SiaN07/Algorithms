@@ -1,0 +1,3 @@
+def sum_odd(n):
+    return sum(range(50, n+1, 2))
+print(sum_odd(101))
