@@ -1,0 +1,3 @@
+def minimum_no(list1):
+    return max(int(i) for i in list1)
+print(minimum_no([100,75,61,7]))
