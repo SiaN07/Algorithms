@@ -1,0 +1,15 @@
+'''
+Reverse individual words without reversing the string
+input - Hello world mama
+output - olleH dlrow amam
+''' 
+def reverseWordsString(Sentence):
+    words = Sentence.split(" ")
+    
+    newWords = [word[::-1] for word in words]
+    
+    newSentence = " ".join(newWords)
+    
+    return newSentence
+
+print(reverseWordsString("Hello world mama"))
