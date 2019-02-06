@@ -1,0 +1,14 @@
+def search(mylist,n):
+    pos = 0
+    found = False
+    stop = False
+    while pos < len(mylist) and not found and not stop:
+        if mylist[pos] == n:
+            found = True
+        else:
+            if mylist[pos] > n:
+                return stop
+            else:
+                pos = pos + 1
+    return found
+print(search([1,4,7,9,10], 8))
