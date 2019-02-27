@@ -1,0 +1,6 @@
+def fib_recur(N):    
+    if N == 1 or N == 2:
+        return 1
+    return fib_recur(N - 1) + fib_recur(N - 2)
+
+print(fib_recur(4))
