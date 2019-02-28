@@ -49,6 +49,27 @@ class LinkedList:
                 last = last.next
             last.next = newnode1
             
+    def deleteNode(self, key):
+ #If head holds the key
+        temp = self.head
+        
+        if temp is not None:
+            if temp.data == key:
+                self.head = temp.next
+                temp = None
+                return
+#search for the key to delete 
+        while temp is not None:
+            if temp.data == key:
+                break
+            prev = temp
+            temp = temp.next
+            
+        if temp == None:
+            return
+    
+        prev.next = temp.next
+        temp = None
 # Code execution starts here 
 if __name__=='__main__': 
 
@@ -64,4 +85,5 @@ if __name__=='__main__':
     llist.insertAtNode(second,"y")
     llist.insertAtStart("f")
     llist.insertAtEnd("hh")
+    llist.deleteNode("b")
     llist.printlinkedlist()
